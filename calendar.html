@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="light.css" id="css" />
+    <script
+      src="https://kit.fontawesome.com/4184b76dff.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      footer{
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html"
+        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.17 135">
+          <path
+            class="cls-1"
+            d="M132.67,28.44a39.06,39.06,0,0,1,0,78.12H113.22V59.11A54.11,54.11,0,0,0,5,59.11v57.35a13.54,13.54,0,0,0,27.08,0v-9.9h27"
+          />
+          <path
+            class="cls-2"
+            d="M113.63,5h19a62.5,62.5,0,0,1,0,125H102.44a16.29,16.29,0,0,1-16.3-16.29V59.11a27,27,0,0,0-54.06,0V79.89h27"
+          />
+        </svg>
+      </a>
+      <nav>
+        <ul class="menu">
+          <li class="nav-link"><a href="./calendar.html">Calendar</a></li>
+          <li class="nav-link"><a href="./timer.html">Timer</a></li>
+          <li>
+            <i
+              class="fa-solid fa-circle-half-stroke fa-2xl"
+              onclick="changeCss();"
+            ></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="calendarSec">
+      <div id="calendar">
+        <div class="month">
+          <ul>
+            <li></li>
+            <li id="month"></li>
+            <li id="year"></li>
+            <li></li>
+          </ul>
+        </div>
+
+        <ul id="weekdays">
+          <li>Пн</li>
+          <li>Вт</li>
+          <li>Ср</li>
+          <li>Чт</li>
+          <li>Пт</li>
+          <li>Сб</li>
+          <li>Нд</li>
+        </ul>
+
+        <ul id="daysCalendar"></ul>
+      </div>
+    </section>
+    <footer>
+      <div class="footerCopyright">
+        <p>&copy; 2024 by <span class="developedBy">Ivan Momot</span></p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+    <script src="./calendar.js"></script>
+  </body>
+</html>

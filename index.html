@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <script
+      src="https://kit.fontawesome.com/4184b76dff.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./light.css" id="css" />
+  </head>
+  <body>
+    <header>
+      <a href="#"
+        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.17 135">
+          <path
+            class="cls-1"
+            d="M132.67,28.44a39.06,39.06,0,0,1,0,78.12H113.22V59.11A54.11,54.11,0,0,0,5,59.11v57.35a13.54,13.54,0,0,0,27.08,0v-9.9h27"
+          />
+          <path
+            class="cls-2"
+            d="M113.63,5h19a62.5,62.5,0,0,1,0,125H102.44a16.29,16.29,0,0,1-16.3-16.29V59.11a27,27,0,0,0-54.06,0V79.89h27"
+          />
+        </svg>
+      </a>
+      <nav>
+        <ul class="menu">
+          <li class="nav-link"><a href="./calendar.html">Calendar</a></li>
+          <li class="nav-link"><a href="./timer.html">Timer</a></li>
+          <li>
+            <i
+              class="fa-solid fa-circle-half-stroke fa-2xl"
+              onclick="changeCss();"
+            ></i>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section id="hero">
+      <h1>JavaScript Task 2024</h1>
+    </section>
+    <section id="slideshowSec">
+      <div id="block">
+        <div class="images">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1675805015392-28fd80c551ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bmF0dXJlfGVufDB8MHwwfHx8MA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bmF0dXJlfGVufDB8MHwwfHx8MA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJlfGVufDB8MHwwfHx8MA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bmF0dXJlfGVufDB8MHwwfHx8MA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bmF0dXJlfGVufDB8MHwwfHx8MA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bmF0dXJlfGVufDB8MHwwfHx8MA%3D%3D"
+            alt=""
+          />
+          <img
+            src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bmF0dXJlfGVufDB8MHwwfHx8MA%3D%3D"
+            alt=""
+          />
+        </div>
+      </div>
+      <i
+        class="fa-solid fa-left-long fa-2xl button prev"
+        onclick="changeImage(-1)"
+      ></i>
+      <i
+        class="fa-solid fa-right-long fa-2xl button next"
+        onclick="changeImage(1)"
+      ></i>
+      <script src="./slideshow.js"></script>
+    </section>
+    <section id="canvasSec">
+      <div class="canvas"><canvas id="canv"></canvas></div>
+      <script src="./canvas.js"></script>
+    </section>
+    <section id="convertorSec">
+      <div class="container">
+        <h3>Конвертор валют</h3>
+        <form action="">
+          <label for="dollars">Долари:</label><br />
+          <input
+            type="number"
+            id="dollars"
+            name="dollars"
+            oninput="convert('dollars')"
+          /><br /><br /><br />
+          <label for="hryvnias">Гривні:</label><br />
+          <input
+            type="number"
+            id="hryvnias"
+            name="hryvnias"
+            oninput="convert('hryvnias')"
+          /><br /><br /><br />
+          <button type="button" onclick="convert()">Перевести</button>
+        </form>
+      </div>
+    </section>
+    <section id="gameSec"></section>
+    <footer>
+      <div class="footerCopyright">
+        <p>&copy; 2024 by <span class="developedBy">Ivan Momot</span></p>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
