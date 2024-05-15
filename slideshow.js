@@ -1,5 +1,5 @@
 let indexValue = 0;
-const img = document.querySelectorAll("img");
+const img = document.getElementsByClassName("imgSlideshow");
 for (let x = 0; x < img.length; x++) {
   img[x].style.display = "none";
 }
