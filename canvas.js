@@ -8,10 +8,10 @@ let numw = w / spacing;
 let numh = h / spacing;
 
 let draw = function (p) {
-  context.fillStyle = "#efefef";
+  context.fillStyle = "#222";
   context.fillRect(0, 0, w, h);
-  context.fillStyle = "hsla(38,5%,12%,.90)";
-  context.strokeStyle = "hsla(38,5%,12%,.90)";
+  context.fillStyle = "#efefef)";
+  context.strokeStyle = "#efefef";
   for (let i = 0; i < numh; i++)
     for (let j = 0; j < numw; j++) {
       let diagnalW = j * spacing + (i % 2 ? 0 : spacing / 2);

@@ -1,13 +1,14 @@
 //Change Mode
-let mode = ["dark", "light"];
-let count = 0;
 function changeCss() {
   let css = document.getElementById("css");
-  css.href = `./${mode[count % 2]}.css`;
-  count++;
+  if (css.getAttribute("href") == `./light.css`) {
+    css.href = `./dark.css`;
+  } else {
+    css.href = `./light.css`;
+  }
 }
 
-//Convertor !
+//Convertor
 
 function convert(inputId) {
   let rate = 39.5;

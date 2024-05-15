@@ -20,6 +20,7 @@ let x = setInterval(function () {
     hrsOutput.innerHTML = "00";
     minOutput.innerHTML = "00";
     secOutput.innerHTML = "00";
-    document.getElementById("message").innerHTML = "Літні канікули розпочались!";
+    document.getElementById("message").innerHTML =
+      "Літні канікули розпочались!";
   }
 }, 1000);

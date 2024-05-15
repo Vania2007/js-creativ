@@ -27,6 +27,7 @@ function canvasClicked(canvasNumber) {
   var theCanvas = "canvas" + canvasNumber;
   var c = document.getElementById(theCanvas);
   var context = c.getContext("2d");
+  context.strokeStyle = "white";
   if (content[canvasNumber - 1] == "") {
     if (turn % 2 == 0) {
       context.beginPath();
