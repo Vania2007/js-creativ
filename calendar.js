@@ -49,7 +49,7 @@ function showCalendar(month, year) {
     cell.setAttribute("data-year", year);
     cell.classList.add("singleDay");
     cell.appendChild(cellText);
-    
+
     calendarBody.appendChild(cell);
   }
   document.getElementById("month").innerHTML = months[month];
@@ -69,3 +69,12 @@ function blankDates(count) {
     calendarBody.appendChild(cell);
   }
 }
+function dayIsWeekend() {
+  let dayPos = today.getDay();
+  if (dayPos > 0 && dayPos <= 5) {
+    document.getElementById("weekend").innerHTML = "Сьогодні - будній день";
+  } else if (dayPos === 0 || dayPos === 6) {
+    document.getElementById("weekend").innerHTML = "Сьогодні - вихідний";
+  }
+}
+dayIsWeekend();

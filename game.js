@@ -24,10 +24,16 @@ window.onload = function () {
 };
 
 function canvasClicked(canvasNumber) {
-  var theCanvas = "canvas" + canvasNumber;
-  var c = document.getElementById(theCanvas);
-  var context = c.getContext("2d");
-  context.strokeStyle = "white";
+  let theCanvas = "canvas" + canvasNumber;
+  let c = document.getElementById(theCanvas);
+  let context = c.getContext("2d");
+  if (document.getElementById("css").getAttribute("href") == `./light.css`) {
+    context.strokeStyle = "black";
+  } else if (
+    document.getElementById("css").getAttribute("href") == `./dark.css`
+  ) {
+    context.strokeStyle = "white";
+  }
   if (content[canvasNumber - 1] == "") {
     if (turn % 2 == 0) {
       context.beginPath();
@@ -49,11 +55,11 @@ function canvasClicked(canvasNumber) {
     squaresFilled++;
     checkForWinners(content[canvasNumber - 1]);
     if (squaresFilled == 25) {
-      alert("Игра закончена!");
+      alert("Гра завершена!");
       location.reload(true);
     }
   } else {
-    alert("Это место уже занято!");
+    alert("це місце вже зайняте!");
   }
 }
 
@@ -66,18 +72,18 @@ function checkForWinners(symbol) {
       content[winningCombinations[a][3]] == symbol &&
       content[winningCombinations[a][4]] == symbol
     ) {
-      alert(symbol + " выиграли!");
+      alert(symbol + " виграли!");
       playAgain();
     }
   }
 }
 
 function playAgain() {
-  y = confirm("Играем еще?");
+  y = confirm("Граємо ще?");
   if (y == true) {
     alert("OK!");
     location.reload(true);
   } else {
-    alert("Пока!");
+    alert("До зустрічі!");
   }
 }

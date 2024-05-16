@@ -217,14 +217,14 @@ canvas {
 /* Calendar */
 #calendarSec {
   margin-top: -80px;
-  height: 75vh;
+  height: 600px;
 }
 #calendar ul {
   list-style-type: none;
 }
 #calendar {
   width: 100%;
-  height: 100%;
+  height: 435px;
   font-family: Verdana, sans-serif;
   max-width: 600px;
   margin: 150px auto 0;
@@ -255,7 +255,7 @@ canvas {
 #weekdays {
   margin: 0;
   padding: 10px 0;
-  background-color: #363636;
+  background-color: #282828;
 }
 
 #weekdays li {
@@ -265,7 +265,7 @@ canvas {
 
 #daysCalendar {
   padding: 10px 0;
-  background: #484848;
+  background: #222;
   margin: 0;
 }
 
@@ -276,7 +276,7 @@ canvas {
   color: #777;
   padding: 15px;
   margin: 3px;
-  border: 1px solid #222;
+  border: 1px solid;
   cursor: pointer;
 }
 
@@ -295,6 +295,11 @@ canvas {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+}
+#weekend {
+  color: var(--whiteText);
+  font-size: 46px;
+  text-align: center;
 }
 
 /* Slideshow */
@@ -470,21 +475,27 @@ footer {
   #hero {
     margin: 60px 0 0;
   }
+  #hero img {
+    width: 350px;
+  }
   #slideshowSec {
     margin: 0 10px;
   }
   #block {
-    width: 350px;
-    height: 200px;
+    width: 380px;
+    height: 230px;
   }
   #canvasSec {
-    margin: -100px 0 0 30px;
+    margin: -180px 0 0 30px;
   }
   #canvasSec canvas {
     width: 80%;
   }
   #convertorSec {
     margin-top: -30px;
+  }
+  #gameSec {
+    margin-top: 120px;
   }
   h3 {
     font-size: 28px;
@@ -501,5 +512,23 @@ footer {
   }
   #message {
     margin-top: -40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #hero img {
+    width: 270px;
+  }
+  #block {
+    width: 250px;
+    height: 150px;
+  }
+  #gameSec{
+    height: 90vh;
+  }
+  #timerSec {
+    height: 1040px;
+  }
+  .box-container {
+    flex-direction: column;
   }
 }

@@ -8,10 +8,20 @@ let numw = w / spacing;
 let numh = h / spacing;
 
 let draw = function (p) {
-  context.fillStyle = "#222";
+  if (document.getElementById("css").getAttribute("href") == `./light.css`) {
+    context.fillStyle = "#efefef";
+    context.fillStyle = "#222)";
+    context.strokeStyle = "#222";
+  } else if (
+    document.getElementById("css").getAttribute("href") == `./dark.css`
+  ) {
+    context.fillStyle = "#222";
+    context.fillStyle = "#efefef)";
+    context.strokeStyle = "#efefef";
+  }
+
   context.fillRect(0, 0, w, h);
-  context.fillStyle = "#efefef)";
-  context.strokeStyle = "#efefef";
+
   for (let i = 0; i < numh; i++)
     for (let j = 0; j < numw; j++) {
       let diagnalW = j * spacing + (i % 2 ? 0 : spacing / 2);
