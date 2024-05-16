@@ -30,6 +30,10 @@ ul.menu {
 ul.menu i {
   cursor: pointer;
   color: #dfdddd;
+  transition: 0.25s;
+}
+ul.menu i:hover{
+  color: #5a5a5a
 }
 header .container {
   margin: 1em !important;

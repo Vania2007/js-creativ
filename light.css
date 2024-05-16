@@ -30,6 +30,10 @@ ul.menu {
 }
 ul.menu i {
   cursor: pointer;
+  transition: 0.25s;
+}
+ul.menu i:hover {
+  color: #b1b1b1;
 }
 header .container {
   margin: 1em !important;
@@ -50,14 +54,14 @@ nav ul {
   margin-top: 10px;
 }
 nav a {
-  color: var(--dark-nav);
+  color: black;
   padding: 10px;
   margin: 10px;
   transition: 0.25s;
   font-size: 18px;
 }
 nav a:hover {
-  color: #c0c9d2;
+  color: #b1b1b1;
 }
 
 nav .flex {
