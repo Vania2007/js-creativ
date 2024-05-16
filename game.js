@@ -34,6 +34,11 @@ function canvasClicked(canvasNumber) {
   ) {
     context.strokeStyle = "white";
   }
+  else if (
+    document.getElementById("css").getAttribute("href") == `./orange.css`
+  ) {
+    context.strokeStyle = "orange";
+  }
   if (content[canvasNumber - 1] == "") {
     if (turn % 2 == 0) {
       context.beginPath();

@@ -1,5 +1,6 @@
 :root {
-  --whiteText: #dfe0e2;
+  --white: #fff;
+  --back: #000;
 }
 * {
   margin: 0;
@@ -9,7 +10,7 @@
   font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 }
 body {
-  background-color: #222;
+  background-color: #efefef;
 }
 ul {
   list-style: none;
@@ -17,7 +18,7 @@ ul {
 /* Header */
 
 header {
-  background-color: #5c5b5b80;
+  background-color: #cccccc80;
   width: 100%;
   height: 90px;
   display: flex;
@@ -29,7 +30,6 @@ ul.menu {
 }
 ul.menu i {
   cursor: pointer;
-  color: #dfdddd;
 }
 header .container {
   margin: 1em !important;
@@ -50,14 +50,14 @@ nav ul {
   margin-top: 10px;
 }
 nav a {
-  color: var(--whiteText);
+  color: var(--dark-nav);
   padding: 10px;
   margin: 10px;
   transition: 0.25s;
   font-size: 18px;
 }
 nav a:hover {
-  color: #9199a1;
+  color: #c0c9d2;
 }
 
 nav .flex {
@@ -146,7 +146,7 @@ svg {
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 64px;
-  color: var(--whiteText);
+  color: orange;
 }
 #hero img {
   width: 550px;
@@ -169,11 +169,13 @@ canvas {
   font-size: 52px;
   text-align: center;
   margin: 120px 0 -80px;
-  color: var(--whiteText);
 }
 #timerSec {
   overflow: hidden;
   height: 90vh;
+}
+#timerSec h2 {
+  color: orange;
 }
 .container {
   margin: 12% auto;
@@ -199,15 +201,15 @@ canvas {
   font-size: 80px;
   position: relative;
   top: 15px;
-  color: var(--whiteText);
+  color: orange;
 }
 .box .comm {
   position: relative;
   top: 25px;
-  color: rgba(0223, 224, 226, 0.3);
+  color: rgba(0, 0, 0, 0.3);
 }
 #message {
-  color: #2e2d2d;
+  color: orange;
   font-size: 46px;
   text-align: center;
   position: relative;
@@ -255,7 +257,7 @@ canvas {
 #weekdays {
   margin: 0;
   padding: 10px 0;
-  background-color: #282828;
+  background-color: #ddd;
 }
 
 #weekdays li {
@@ -265,7 +267,7 @@ canvas {
 
 #daysCalendar {
   padding: 10px 0;
-  background: #222;
+  background: #eee;
   margin: 0;
 }
 
@@ -276,7 +278,7 @@ canvas {
   color: #777;
   padding: 15px;
   margin: 3px;
-  border: 1px solid;
+  border: 1px solid #ccc;
   cursor: pointer;
 }
 
@@ -296,12 +298,12 @@ canvas {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
 }
+
 #weekend {
-  color: var(--whiteText);
-  font-size: 46px;
+  color: #2e2d2d;
+  font-size: 36px;
   text-align: center;
 }
-
 /* Slideshow */
 
 #slideshowSec {
@@ -320,7 +322,7 @@ canvas {
   width: 850px;
   height: 550px;
   overflow: hidden;
-  border: 10px solid #efefef;
+  border: 10px solid rgb(209, 141, 13);
 }
 #block .images {
   width: 100%;
@@ -331,7 +333,7 @@ canvas {
   height: 100%;
 }
 .button {
-  color: #efefef;
+  color: rgb(255, 166, 0);
   cursor: pointer;
 }
 .prev {
@@ -353,14 +355,11 @@ canvas {
   text-align: center;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 46px;
-  color: var(--whiteText);
+  color: orange;
 }
 form {
   margin: 100px auto;
   width: 300px;
-}
-form label {
-  color: var(--whiteText);
 }
 form input {
   background: transparent;
@@ -368,7 +367,7 @@ form input {
   line-height: 1.5;
   text-align: right;
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
   border-style: none;
   border-width: 0px;
   border-radius: 0px;
@@ -378,7 +377,7 @@ form input {
   width: 100%;
   font-family: "Open Sans", sans-serif;
   background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   margin-top: 6px;
 }
 form button {
@@ -395,7 +394,7 @@ form button {
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
   word-break: normal;
   color: rgb(0, 0, 0);
-  background: rgb(92, 193, 44);
+  background: rgb(235, 165, 36);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px,
     rgba(0, 0, 0, 0.12) 0px 0px 4px 0px;
   white-space: nowrap;
@@ -405,12 +404,12 @@ form button {
   margin: 0px;
 }
 form button:hover {
-  background-color: rgb(43, 126, 5);
+  background-color: rgb(177, 103, 7);
 }
 /* Game */
 
 #gameSec {
-  margin-top: 40px;
+  margin-top: 120px;
   text-align: center;
   width: 100%;
   height: 80vh;
@@ -419,16 +418,16 @@ form button:hover {
   font-size: 46px;
   font-family: Verdana, Geneva, sans-serif;
   margin-bottom: 60px;
-  color: var(--whiteText);
+  color: orange;
 }
 #gameSec canvas {
   display: inline;
   margin: 5px;
-  border: 1px solid #fff;
+  border: 1px solid black;
 }
 /* Footer */
 footer {
-  background-color: #5c5b5b80;
+  background-color: #cccccc80;
 }
 .footerCopyright {
   padding: 2.5em 1em;
@@ -443,7 +442,7 @@ footer {
   font-size: 1.25em;
   margin-top: -12px;
   text-align: center;
-  color: var(--whiteText);
+  color: orange;
 }
 
 .developedBy {
@@ -457,7 +456,7 @@ footer {
     grid-template-rows: 1fr 1fr;
   }
   #hero h1 {
-    font-size: 46px;
+    font-size: 52px;
   }
   #hero img {
     width: 450px;
@@ -492,11 +491,9 @@ footer {
     width: 80%;
   }
   #convertorSec {
-    margin-top: -30px;
+    margin-top: -100px;
   }
-  #gameSec {
-    margin-top: 120px;
-  }
+
   h3 {
     font-size: 28px;
   }
@@ -522,7 +519,7 @@ footer {
     width: 250px;
     height: 150px;
   }
-  #gameSec{
+  #gameSec {
     height: 90vh;
   }
   #timerSec {

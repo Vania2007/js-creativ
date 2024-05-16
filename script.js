@@ -2,6 +2,8 @@
 function changeCss() {
   let css = document.getElementById("css");
   if (css.getAttribute("href") == `./light.css`) {
+    css.href = `./orange.css`;
+  } else if (css.getAttribute("href") == `./orange.css`) {
     css.href = `./dark.css`;
   } else {
     css.href = `./light.css`;
