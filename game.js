@@ -64,7 +64,7 @@ function canvasClicked(canvasNumber) {
       location.reload(true);
     }
   } else {
-    alert("це місце вже зайняте!");
+    alert("Це місце вже зайняте!");
   }
 }
 
