@@ -33,7 +33,7 @@ ul.menu i {
   color: orange;
   transition: 0.25s;
 }
-ul.menu i:hover{
+ul.menu i:hover {
   color: rgb(155, 102, 3);
 }
 header .container {
@@ -224,7 +224,7 @@ canvas {
 /* Calendar */
 #calendarSec {
   margin-top: -80px;
-  height: 600px;
+  height: 720px;
 }
 #calendar ul {
   list-style-type: none;
