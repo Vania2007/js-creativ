@@ -217,10 +217,12 @@ canvas {
   position: relative;
   top: 15px;
   color: var(--whiteText);
+  z-index: -1;
 }
 .box .comm {
   position: relative;
   top: 25px;
+  z-index: -1;
   color: rgba(0223, 224, 226, 0.3);
 }
 #message {
