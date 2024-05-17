@@ -17,30 +17,43 @@
   </head>
   <body>
     <header>
-      <a href="#"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.17 135">
-          <path
-            class="cls-1"
-            d="M132.67,28.44a39.06,39.06,0,0,1,0,78.12H113.22V59.11A54.11,54.11,0,0,0,5,59.11v57.35a13.54,13.54,0,0,0,27.08,0v-9.9h27"
-          />
-          <path
-            class="cls-2"
-            d="M113.63,5h19a62.5,62.5,0,0,1,0,125H102.44a16.29,16.29,0,0,1-16.3-16.29V59.11a27,27,0,0,0-54.06,0V79.89h27"
-          />
-        </svg>
-      </a>
       <nav>
-        <ul class="menu">
-          <li class="nav-link"><a href="./calendar.html">Calendar</a></li>
-          <li class="nav-link"><a href="./timer.html">Timer</a></li>
-          <li>
-            <i
-              class="fa-solid fa-circle-half-stroke fa-2xl"
-              onclick="changeCss();"
-            ></i>
-          </li>
-        </ul>
+        <div class="container">
+          <div class="navbar__wrap">
+            <div class="hamb">
+              <div class="hamb__field" id="hamb">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </div>
+            </div>
+            <a href="#" class="logo" id="logo"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200.17 135">
+                <path
+                  class="cls-1"
+                  d="M132.67,28.44a39.06,39.06,0,0,1,0,78.12H113.22V59.11A54.11,54.11,0,0,0,5,59.11v57.35a13.54,13.54,0,0,0,27.08,0v-9.9h27"
+                />
+                <path
+                  class="cls-2"
+                  d="M113.63,5h19a62.5,62.5,0,0,1,0,125H102.44a16.29,16.29,0,0,1-16.3-16.29V59.11a27,27,0,0,0-54.06,0V79.89h27"
+                />
+              </svg>
+            </a>
+            <ul class="menu" id="menu">
+              <li class="nav-link"><a href="./index.html">Home</a></li>
+              <li class="nav-link"><a href="./calendar.html">Calendar</a></li>
+              <li class="nav-link"><a href="./timer.html">Timer</a></li>
+              <li>
+                <i
+                  class="fa-solid fa-circle-half-stroke fa-2xl"
+                  onclick="changeCss();"
+                ></i>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
+      <div class="popup" id="popup"></div>
     </header>
     <section id="hero">
       <h1>JavaScript Task 2024</h1>

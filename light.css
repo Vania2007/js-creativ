@@ -18,7 +18,10 @@ ul {
 /* Header */
 
 header {
-  background-color: #cccccc80;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ccccccee;
   width: 100%;
   height: 90px;
   display: flex;
@@ -35,40 +38,55 @@ ul.menu i {
 ul.menu i:hover {
   color: #b1b1b1;
 }
-header .container {
-  margin: 1em !important;
-  max-width: 1200px;
-}
-nav {
-  margin: 0;
-  height: 70px;
-  padding: 25px 0;
-  z-index: 9999;
-}
-.container nav {
-  padding-right: 0;
-  padding-left: 0;
-}
-nav ul {
-  display: flex;
-  margin-top: 10px;
-}
-nav a {
-  color: black;
-  padding: 10px;
-  margin: 10px;
-  transition: 0.25s;
-  font-size: 18px;
-}
-nav a:hover {
-  color: #b1b1b1;
+nav .container {
+  width: 100vw;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 15px;
 }
 
-nav .flex {
+nav {
+  width: 100%;
+  height: 75px;
+}
+
+.navbar__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+}
+
+.hamb {
+  display: none;
+}
+
+.popup {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu > li > a {
+  text-decoration: none;
+}
+
+.navbar__wrap .menu {
+  display: flex;
+}
+
+.navbar__wrap .menu > li > a {
+  padding: 0 20px;
+  color: black;
+  transition: 0.25s;
+  font-size: 18px;
+}
+
+.navbar__wrap .menu > li > a:hover {
+  color: #b1b1b1;
 }
 svg {
   position: relative;
@@ -138,7 +156,7 @@ svg {
 /* Hero */
 
 #hero {
-  margin-top: 60px;
+  margin: 120px 20px 0;
   height: 60vh;
   display: grid;
   align-items: center;
@@ -218,7 +236,6 @@ canvas {
 
 /* Calendar */
 #calendarSec {
-  margin-top: -80px;
   height: 720px;
 }
 #calendar ul {
@@ -425,7 +442,7 @@ form button:hover {
 }
 /* Footer */
 footer {
-  background-color: #cccccc80;
+  background-color: #ccccccee;
 }
 .footerCopyright {
   padding: 2.5em 1em;
@@ -448,7 +465,6 @@ footer {
 /* Tablet */
 @media screen and (max-width: 1024px) {
   #hero {
-    margin: 80px 60px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
@@ -468,8 +484,93 @@ footer {
 }
 /* Phone */
 @media screen and (max-width: 768px) {
-  #hero {
-    margin: 60px 0 0;
+  .navbar__wrap .menu {
+    display: none;
+  }
+  .navbar__wrap {
+    flex-direction: row-reverse;
+  }
+  .hamb {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamb__field {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 6px auto;
+    background-color: #000000;
+    transition: 0.2s;
+  }
+
+  .popup {
+    position: fixed;
+    top: 90px;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 100;
+    display: flex;
+    transition: 0.3s;
+  }
+
+  .popup.open {
+    left: 0;
+  }
+
+  .popup .menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: start;
+    padding: 50px 0;
+    overflow: auto;
+    margin: 0;
+  }
+
+  .popup .menu > li {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .popup .menu > li > a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3f3f3f;
+  }
+
+  .popup .menu > li > a:hover {
+    background-color: rgba(71, 71, 71, 0.1);
+  }
+
+  .hamb__field.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamb__field.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamb__field.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+
+  body.noscroll {
+    overflow: hidden;
   }
   #hero img {
     width: 350px;
@@ -523,7 +624,10 @@ footer {
     height: 90vh;
   }
   #timerSec {
-    height: 1040px;
+    height: 1200px;
+  }
+  #message {
+    margin: 10px 0 0;
   }
   .box-container {
     flex-direction: column;

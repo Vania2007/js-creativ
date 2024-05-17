@@ -18,8 +18,7 @@ let draw = function (p) {
     context.fillStyle = "#222";
     context.fillStyle = "#efefef)";
     context.strokeStyle = "#efefef";
-  }
-  else if (
+  } else if (
     document.getElementById("css").getAttribute("href") == `./orange.css`
   ) {
     context.fillStyle = "#efefef";

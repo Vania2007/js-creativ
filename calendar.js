@@ -1,4 +1,3 @@
-//     !
 let today = new Date();
 let dayInt = today.getDate();
 let month = today.getMonth();
