@@ -32,8 +32,8 @@ ul.menu i {
   color: #dfdddd;
   transition: 0.25s;
 }
-ul.menu i:hover{
-  color: #5a5a5a
+ul.menu i:hover {
+  color: #5a5a5a;
 }
 header .container {
   margin: 1em !important;
@@ -514,6 +514,9 @@ footer {
     width: 95%;
     margin-top: 120px;
   }
+  #daysCalendar li {
+    padding: 4px;
+  }
   #message {
     margin-top: -40px;
   }
@@ -526,7 +529,7 @@ footer {
     width: 250px;
     height: 150px;
   }
-  #gameSec{
+  #gameSec {
     height: 90vh;
   }
   #timerSec {

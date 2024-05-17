@@ -512,6 +512,9 @@ footer {
     width: 95%;
     margin-top: 120px;
   }
+  #daysCalendar li {
+    padding: 4px;
+  }
   #message {
     margin-top: -40px;
   }
